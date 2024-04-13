@@ -1,0 +1,188 @@
+@charset 'utf-8';
+
+/*--- common setting ---*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* accent color: rgb(228,135,92) */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(250, 249, 248);
+  color: rgb(71, 71, 71);
+}
+
+input[type="text"]:focus {
+  /* outline: none; */
+  outline: 2px solid rgb(228, 135, 92);
+}
+
+#wrapper {
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid red;
+}
+
+ul {
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+/*--- top ---*/
+#top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#searchCities {
+  font-size: 2rem;
+  width: 24rem;
+  height: 4rem;
+  border-radius: 8px;
+  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
+  border: none;
+  text-align: center;
+}
+
+.dropdownFavoriteCities {
+  position: relative;
+  display: inline-block;
+  display: block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: rgb(250, 249, 248);
+  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: rgb(71, 71, 71);
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownContent a:hover {
+  background-color: rgba(229, 228, 226, 0.902);
+}
+
+.btnDropdown {
+  background-color: rgb(250, 249, 248);
+  color: rgb(71, 71, 71);
+  padding: 8px 16px;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  width: 24rem;
+  height: 4rem;
+}
+
+.btnDropdown:hover,
+.btnDropdown:focus {
+  background-color: rgba(229, 228, 226, 0.902);
+}
+
+.show {
+  display: block;
+}
+
+/*--- hero contents ---*/
+#heroContents {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+/* .currentWeather {
+  border: 1px solid red;
+} */
+
+/*--- current temperature info ---*/
+#currentTemp {
+  /* border: 1px solid blue; */
+  font-size: 16rem;
+}
+
+/* .currentTempNum {
+  border: 1px solid blue;
+} */
+
+.tempInfo {
+  font-size: 2.4rem;
+  display: flex;
+}
+
+.tempDetail {
+  /* border: 1px solid blue; */
+  display: flex;
+  margin-left: 2rem;
+}
+
+.tempScale {
+  margin-right: 1rem;
+}
+
+/*--- current weather ---*/
+/*--- current weather title ---*/
+#weatherTitle {
+  /* border: 1px solid blue; */
+
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleCityName {
+  font-size: 4rem;
+}
+
+.favoIcons {
+  margin-left: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/*--- current weather info ---*/
+#weatherInfo {
+  /* border: 1px solid blue; */
+  text-align: center;
+}
+
+.weatherDay {
+  font-size: 2.4rem;
+}
+
+/*--- current hourly range POP and UVI ---*/
+#currentHourlyRange {
+  border: 1px solid blue;
+  font-size: 2.4rem;
+}
+
+.flexList {
+  display: flex;
+}
+/*--- current P.O.P. info ---*/
+/*--- current UVI info ---*/

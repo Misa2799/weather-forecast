@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIY Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main id="wrapper">
+      <!-- boxes of favorite and search -->
+      <section id="top" class="contaiers">
+        <!-- START search form -->
+        <div class="searchForm">
+          <form action="" class="searchBox">
+            <input type="text" id="searchCities" placeholder=" Search City" />
+          </form>
+        </div>
+        <!-- END search form -->
+        <!-- START dropdown of favorite cites -->
+        <div class="dropdownFavoriteCities">
+          <button class="btnDropdown" onclick="topDropdownFavo()">
+            <i class="far fa-heart"></i>
+            Favorite Cities
+          </button>
+          <div id="topDropdown" class="dropdownContent">
+            <a href="">Vancouver</a>
+            <a href="">Brasília</a>
+            <a href="">Bogotá</a>
+            <a href="">Tokyo</a>
+          </div>
+          <!-- using form tag
+          <form action="">
+          <select name="cities" id="cities" class="favoriteCities">
+            <option value="">Favorite Cities</option>
+            <option value="cityName">Vancouver</option>
+          </select>
+        </form> -->
+        </div>
+        <!-- END dropdown of favorite cites -->
+      </section>
+
+      <!-- hero contents -->
+      <section id="heroContents" class="contaiers">
+        <!-- START current temperature info -->
+        <div id="currentTemp">
+          <p class="currentTempNum">10<span class="currentTempSym">˚C</span></p>
+          <ul class="tempInfo">
+            <li class="tempDetail">
+              <!-- <i class="fas fa-arrow-up"></i> -->
+              <p class="tempScale">Max:</p>
+              <p class="tempHigh">15<span class="tempDetailSym">˚C</span></p>
+            </li>
+            <li class="tempDetail">
+              <!-- <i class="fas fa-arrow-down"></i> -->
+              <p class="tempScale">Min:</p>
+              <p class="tempLow">4<span class="tempDetailSym">˚C</span></p>
+            </li>
+          </ul>
+        </div>
+        <!-- END current temperature info -->
+
+        <!-- current weather -->
+        <div class="currentWeather">
+          <!-- START current weather title -->
+          <div id="weatherTitle">
+            <h1 class="titleCityName">Vancouver</h1>
+            <ul class="favoIcons">
+              <li class="beforeFavo">
+                <i class="far fa-heart titleIcons"></i>
+              </li>
+              <li class="afterFavo hidden">
+                <i class="fas fa-heart"></i>
+              </li>
+            </ul>
+          </div>
+          <!-- END current weather title -->
+
+          <!-- START current weather info -->
+          <div id="weatherInfo">
+            <!-- START change data with JS -->
+            <img
+              src="554.png"
+              alt="sunny"
+              class="weatherImages"
+              width="200"
+              height="200"
+            />
+            <h2 class="weatherDay">Friday</h2>
+            <!-- END change data with JS -->
+          </div>
+          <!-- END current weather info -->
+        </div>
+        <!-- END current weather title -->
+
+        <!-- START current hourly range POP and UVI -->
+        <div id="currentHourlyRange">
+          <!-- START current P.O.P. info -->
+          <div class="currentPop">
+            <ul class="popInfo flexList">
+              <li class="hourlyPopContents">
+                <p class="hourlyPopHour">8:00</p>
+                <img
+                  src="554.png"
+                  alt=""
+                  class="dailyDetailDayImg"
+                  width="80"
+                  height="80"
+                />
+                <p class="hourlyPopPrecipitation">
+                  30<span class="percentSym">%</span>
+                </p>
+              </li>
+              <li class="hourlyPopContents">
+                <p class="hourlyPopHour">11:00</p>
+                <img
+                  src="554.png"
+                  alt=""
+                  class="dailyDetailDayImg"
+                  width="80"
+                  height="80"
+                />
+
+                <p class="hourlyPopPrecipitation">
+                  30<span class="percentSym">%</span>
+                </p>
+              </li>
+              <li class="hourlyPopContents">
+                <p class="hourlyPopHour">14:00</p>
+                <img
+                  src="554.png"
+                  alt=""
+                  class="dailyDetailDayImg"
+                  width="80"
+                  height="80"
+                />
+
+                <p class="hourlyPopPrecipitation">
+                  30<span class="percentSym">%</span>
+                </p>
+              </li>
+              <li class="hourlyPopContents">
+                <p class="hourlyPopHour">17:00</p>
+                <img
+                  src="554.png"
+                  alt=""
+                  class="dailyDetailDayImg"
+                  width="80"
+                  height="80"
+                />
+
+                <p class="hourlyPopPrecipitation">
+                  30<span class="percentSym">%</span>
+                </p>
+              </li>
+              <li class="hourlyPopContents">
+                <p class="hourlyPopHour">20:00</p>
+                <img
+                  src="554.png"
+                  alt=""
+                  class="dailyDetailDayImg"
+                  width="80"
+                  height="80"
+                />
+
+                <p class="hourlyPopPrecipitation">
+                  30<span class="percentSym">%</span>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <!-- END current P.O.P. info -->
+
+          <!--
+          START current UVI info
+          <div class="currentUVI">
+            <ul class="uviInfo flexList">
+              <li class="hourlyUVIContents">
+                <p class="hourlyUVIndex">3</p>
+              </li>
+              <li class="hourlyUVIContents">
+                <p class="hourlyUVIndex">5</p>
+              </li>
+              <li class="hourlyUVIContents">
+                <p class="hourlyUVIndex">7</p>
+              </li>
+              <li class="hourlyUVIContents">
+                <p class="hourlyUVIndex">4</p>
+              </li>
+              <li class="hourlyUVIContents">
+                <p class="hourlyUVIndex">1</p>
+              </li>
+            </ul>
+          </div>
+          END current UVI info
+        --></div>
+        <!-- END current hourly range POP and UVI -->
+      </section>
+
+      <!-- daily forecast -->
+      <section id="dailyForecast" class="contaiers">
+        <ul class="dailyInfo">
+          <li class="dailyDetail">
+            <p class="dailyDetailDay">Sat.</p>
+            <img
+              src="554.png"
+              alt=""
+              class="dailyDetailDayImg"
+              width="80"
+              height="80"
+            />
+            <p class="dailyDetailTemp">
+              20<span class="dailyDetailSym">˚C</span>
+            </p>
+          </li>
+        </ul>
+
+        <div class="walkingDogTemp">
+          <ul class="walkingDetail">
+            <li class="wakingCards">
+              <div class="dogImage">
+                <img
+                  src="images/dont-wanna-go3.png"
+                  alt="I don't want to go for a walk."
+                  class="dogs"
+                />
+              </div>
+              <p class="walkingTime">16:00</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS file -->
+    <script src="app.js"></script>
+  </body>
+</html>
