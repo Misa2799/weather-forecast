@@ -1,5 +1,9 @@
 "use strict";
 
+//API key
+const WEATHER_API_KEY = config.apikey;
+console.log(WEATHER_API_KEY);
+
 // START section top dropdown btn
 function topDropdownFavo() {
   document.getElementById("topDropdown").classList.toggle("show");
