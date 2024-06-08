@@ -1,3 +1,5 @@
 /.vscode
 node_modules
-# apikey.js
+apikey.js
+apikey.ts
+*.js.map
