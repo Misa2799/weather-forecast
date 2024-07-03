@@ -1,6 +1,7 @@
 "use strict";
 
-import { fetchWeatherDate } from "./defaultData/defaultWeatherData.js";
+import { fetchWeatherDate } from "./components/defaultWeatherData.js";
+import { displayData } from "./components/displayData.js";
 
 // START section top dropdown btn
 // function topDropdownFavo() {
@@ -20,12 +21,38 @@ import { fetchWeatherDate } from "./defaultData/defaultWeatherData.js";
 // };
 // END section top dropdown btn
 
+// let splittedCity: string = "";
+
+// function captureCity(city) {
+//   const citySearchElement: HTMLElement | null =
+//     document.getElementById("citySearch");
+
+//   if (citySearchElement === "")
+// }
+
+// if (splittedCity == "" || "hiroshima") {
+//   const citySearchElement: HTMLElement | null =
+//     document.getElementById("citySearch");
+
+//   if (citySearchElement) {
+//     const cityArr: string[] = (
+//       citySearchElement as HTMLInputElement
+//     ).value.split(",");
+//     splittedCity = cityArr[0];
+//     console.log("splittedCity", splittedCity);
+//   } else {
+//     console.error("Please enter a city name");
+//   }
+// }
+
 let city: string = "hiroshima";
 fetchWeatherDate(city)
   .then((data) => {
     if (data.list.length > 0) {
-      const defaultForecast = data.list[0];
+      // const defaultForecast = data.list[0];
+      const defaultForecast = data;
       console.log("defaultForecast", defaultForecast);
+      displayData(defaultForecast);
     } else {
       console.log("No forecast data available.");
     }
