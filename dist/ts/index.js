@@ -1,6 +1,6 @@
 "use strict";
 import { fetchWeatherDate } from "./components/defaultWeatherData.js";
-import { displayData } from "./components/displayData.js";
+import { displayDefaultData } from "./components/displayDefaultData.js";
 // START section top dropdown btn
 // function topDropdownFavo() {
 //   document.getElementById("topDropdown").classList.toggle("show");
@@ -43,7 +43,7 @@ fetchWeatherDate(city)
         // const defaultForecast = data.list[0];
         const defaultForecast = data;
         console.log("defaultForecast", defaultForecast);
-        displayData(defaultForecast);
+        displayDefaultData(defaultForecast);
     }
     else {
         console.log("No forecast data available.");

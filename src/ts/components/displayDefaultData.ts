@@ -1,6 +1,6 @@
 import { WeatherData } from "../type/WeatherData.js";
 
-export function displayData(_weatherData: WeatherData) {
+export function displayDefaultData(_weatherData: WeatherData) {
   // DOM
   const currentTempNum: HTMLParagraphElement | null =
     document.querySelector(".currentTempNum");

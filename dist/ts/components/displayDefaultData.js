@@ -34,4 +34,4 @@ export function displayDefaultData(_weatherData) {
     if (weatherImage)
         weatherImage.src = iconUrl;
 }
-//# sourceMappingURL=displayData.js.map
+//# sourceMappingURL=displayDefaultData.js.map
