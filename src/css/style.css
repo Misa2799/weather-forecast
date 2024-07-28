@@ -187,52 +187,59 @@ header {
 }
 
 .walkingDogImg {
-  width: 65%;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.6rem;
 }
 
-.dogs img {
-  width: 60rem;
-  height: auto;
+.dogs {
+  width: 100%;
+  max-width: 60rem;
+  height: 20rem;
   object-fit: cover;
-  /* object-position: 30% 100%; */
+  object-position: 13% 5%;
+  border-radius: 1.6rem;
 }
 
 .textAboutWalking {
   width: 45%;
+  /* height: 12rem; */
   font-size: 2rem;
 
-  /* balloon */
+  /*--- START balloon ---*/
   position: relative;
-  margin: 2em 0 2em 40px;
-  padding: 15px;
+  display: inline-block;
+  margin: 1.6rem 0 1.6rem;
+  padding: 0 0.8rem;
+  text-align: center;
   background: #ffdde5;
-  border-radius: 30px;
+  border-radius: 1.6rem;
 }
 
 .textAboutWalking:before {
   content: "";
   position: absolute;
-  left: -38px;
-  width: 13px;
-  height: 12px;
-  bottom: 0;
-  background: #ffdde5;
-  border-radius: 50%;
+  top: 50%;
+  left: -2.4rem;
+  margin-top: -2.4rem;
+  border: 1.6rem solid transparent;
+  border-right: 1.6rem solid #ffdde5;
+  z-index: 0;
 }
+/*--- END balloon ---*/
 
-.textAboutWalking:after {
-  content: "";
+.cardText {
   position: absolute;
-  left: -24px;
-  width: 20px;
-  height: 18px;
-  bottom: 3px;
-  background: #ffdde5;
-  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /*--- current hourly range P.O.P. ---*/
 #currentHourlyRange {
+  margin-top: 3.2rem;
   font-size: 2rem;
 }
 
