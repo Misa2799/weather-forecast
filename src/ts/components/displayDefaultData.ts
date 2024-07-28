@@ -8,7 +8,7 @@ export function displayDefaultData(_currentData: CurrentData) {
   const titleCityName: HTMLParagraphElement | null =
     document.querySelector(".titleCityName");
   const weatherImage: HTMLImageElement | null =
-    document.querySelector(".weatherImage");
+    document.querySelector(".weatherImg");
   const currentTime: HTMLParagraphElement | null =
     document.querySelector(".weatherTime");
 

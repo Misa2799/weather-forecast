@@ -3,7 +3,7 @@ export function displayDefaultData(_currentData) {
     // DOM
     const currentTempNum = document.querySelector(".currentTempNum");
     const titleCityName = document.querySelector(".titleCityName");
-    const weatherImage = document.querySelector(".weatherImage");
+    const weatherImage = document.querySelector(".weatherImg");
     const currentTime = document.querySelector(".weatherTime");
     // clear all primary data
     if (currentTempNum)

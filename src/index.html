@@ -10,6 +10,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -56,43 +62,45 @@
 
       <!-- hero contents -->
       <section id="heroContents" class="contaiers">
-        <!-- START current weather title -->
-        <div id="weatherTitle">
-          <h1 class="titleCityName">Vancouver</h1>
-          <ul class="favoIcons">
-            <li class="beforeFavo">
-              <i class="far fa-heart titleIcons"></i>
-            </li>
-            <li class="afterFavo hidden">
-              <i class="fas fa-heart"></i>
-            </li>
-          </ul>
-          <!-- END current weather info -->
+        <!-- current weather -->
+        <div class="currentWeather">
+          <!-- START current weather title -->
+          <div id="weatherTitle">
+            <h1 class="titleCityName">Vancouver</h1>
+            <ul class="favoIcons">
+              <li class="beforeFavo">
+                <i class="far fa-heart titleIcons"></i>
+              </li>
+              <li class="afterFavo hidden">
+                <i class="fas fa-heart"></i>
+              </li>
+            </ul>
+            <!-- END current weather info -->
+          </div>
+          <!-- END current weather -->
+
+          <!-- START current weather info -->
+          <div id="weatherImgDiv">
+            <!-- START change data with JS -->
+            <img src="" alt="" class="weatherImg" width="160" />
+            <!-- END change data with JS -->
+          </div>
         </div>
         <!-- END current weather title -->
 
-        <!-- START current weather info -->
-        <div id="weatherInfo">
-          <!-- START change data with JS -->
-          <img src="" alt="" class="weatherImage" width="200" height="200" />
-          <!-- END change data with JS -->
-        </div>
-
-        <!-- current weather -->
-        <div class="currentWeather">
-          <!-- START current temperature info -->
-          <div id="currentTemp">
-            <h1 class="currentTempTitle">Current Temperature</h1>
+        <!-- START current temperature info -->
+        <div id="currentTemp">
+          <h1 class="currentTempTitle">Current Temperature</h1>
+          <div class="currentTemFlex">
             <p class="currentTempNum">10</p>
             <p class="currentTempSym">˚C</p>
           </div>
-          <!-- END current temperature info -->
         </div>
-        <!-- END current weather title -->
+        <!-- END current temperature info -->
       </section>
 
       <!-- daily forecast -->
-      <section id="dailyForecast" class="contaiers">
+      <section id="dogWalkingForecast" class="contaiers">
         <div class="walkingDogImg">
           <img src="images/dont-wanna-go3.png" alt="a lazy dog" class="dogs" />
         </div>
@@ -117,9 +125,6 @@
                 width="80"
                 height="80"
               />
-              <p class="hourlyPopPrecipitation">
-                30<span class="percentSym">%</span>
-              </p>
             </li>
             <li class="hourlyPopContents">
               <p class="hourlyPopHour">11:00</p>
@@ -130,10 +135,6 @@
                 width="80"
                 height="80"
               />
-
-              <p class="hourlyPopPrecipitation">
-                30<span class="percentSym">%</span>
-              </p>
             </li>
             <li class="hourlyPopContents">
               <p class="hourlyPopHour">14:00</p>
@@ -144,10 +145,6 @@
                 width="80"
                 height="80"
               />
-
-              <p class="hourlyPopPrecipitation">
-                30<span class="percentSym">%</span>
-              </p>
             </li>
           </ul>
         </div>
