@@ -25,7 +25,7 @@ export async function fetchWeatherDate(city: string): Promise<WeatherData> {
   // API Call
   // const forecastUrl: string = `https://api.openweathermap.org/data/2.5/forecast?q=${splittedCity}&appid=${apiKey}`;
 
-  // fetch test
+  // fetch
   const forecastUrl: string = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
   const response = await fetch(forecastUrl);

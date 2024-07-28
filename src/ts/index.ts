@@ -1,7 +1,6 @@
-"use strict";
-
-import { fetchWeatherDate } from "./components/defaultWeatherData.js";
+// import { fetchWeatherDate } from "./components/fetchWeatherDate.js";
 import { displayDefaultData } from "./components/displayDefaultData.js";
+import { fetchCurrentDate } from "./components/fetchCurrentDate.js";
 
 // START section top dropdown btn
 // function topDropdownFavo() {
@@ -46,9 +45,9 @@ import { displayDefaultData } from "./components/displayDefaultData.js";
 // }
 
 let city: string = "hiroshima";
-fetchWeatherDate(city)
+fetchCurrentDate(city)
   .then((data) => {
-    if (data.list.length > 0) {
+    if (data) {
       // const defaultForecast = data.list[0];
       const defaultForecast = data;
       console.log("defaultForecast", defaultForecast);

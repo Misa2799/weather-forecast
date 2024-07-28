@@ -12,13 +12,22 @@
     />
   </head>
   <body>
+    <header>
+      <h1 class="headerTittle">Sachiko and Komugi's weather</h1>
+    </header>
+
     <main id="wrapper">
       <!-- boxes of favorite and search -->
       <section id="top" class="contaiers">
         <!-- START search form -->
         <div class="searchForm">
           <form action="" class="searchBox">
-            <input type="text" id="searchCities" placeholder=" Search City" />
+            <input
+              type="text"
+              id="searchCities"
+              placeholder=" Input Location "
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
         <!-- END search form -->
@@ -26,7 +35,7 @@
         <div class="dropdownFavoriteCities">
           <button class="btnDropdown" onclick="topDropdownFavo()">
             <i class="far fa-heart"></i>
-            Favorite Cities
+            Select Location
           </button>
           <div id="topDropdown" class="dropdownContent">
             <a href="">Vancouver</a>
@@ -47,188 +56,102 @@
 
       <!-- hero contents -->
       <section id="heroContents" class="contaiers">
-        <!-- START current temperature info -->
-        <div id="currentTemp">
-          <p class="currentTempNum">10</p>
-          <span class="currentTempSym">˚C</span>
-          <ul class="tempInfo">
-            <li class="tempDetail">
-              <!-- <i class="fas fa-arrow-up"></i> -->
-              <p class="tempScale">Max:</p>
-              <p class="tempHigh">15<span class="tempDetailSym">˚C</span></p>
+        <!-- START current weather title -->
+        <div id="weatherTitle">
+          <h1 class="titleCityName">Vancouver</h1>
+          <ul class="favoIcons">
+            <li class="beforeFavo">
+              <i class="far fa-heart titleIcons"></i>
             </li>
-            <li class="tempDetail">
-              <!-- <i class="fas fa-arrow-down"></i> -->
-              <p class="tempScale">Min:</p>
-              <p class="tempLow">4<span class="tempDetailSym">˚C</span></p>
+            <li class="afterFavo hidden">
+              <i class="fas fa-heart"></i>
             </li>
           </ul>
-        </div>
-        <!-- END current temperature info -->
-
-        <!-- current weather -->
-        <div class="currentWeather">
-          <!-- START current weather title -->
-          <div id="weatherTitle">
-            <h1 class="titleCityName">Vancouver</h1>
-            <ul class="favoIcons">
-              <li class="beforeFavo">
-                <i class="far fa-heart titleIcons"></i>
-              </li>
-              <li class="afterFavo hidden">
-                <i class="fas fa-heart"></i>
-              </li>
-            </ul>
-          </div>
-          <!-- END current weather title -->
-
-          <!-- START current weather info -->
-          <div id="weatherInfo">
-            <!-- START change data with JS -->
-            <img src="" alt="" class="weatherImage" width="200" height="200" />
-            <h2 class="weatherDay">Friday</h2>
-            <!-- END change data with JS -->
-          </div>
           <!-- END current weather info -->
         </div>
         <!-- END current weather title -->
 
-        <!-- START current hourly range POP and UVI -->
-        <div id="currentHourlyRange">
-          <!-- START current P.O.P. info -->
-          <div class="currentPop">
-            <ul class="popInfo flexList">
-              <li class="hourlyPopContents">
-                <p class="hourlyPopHour">8:00</p>
-                <img
-                  src="images/554.png"
-                  alt=""
-                  class="dailyDetailDayImg"
-                  width="80"
-                  height="80"
-                />
-                <p class="hourlyPopPrecipitation">
-                  30<span class="percentSym">%</span>
-                </p>
-              </li>
-              <li class="hourlyPopContents">
-                <p class="hourlyPopHour">11:00</p>
-                <img
-                  src="images/554.png"
-                  alt=""
-                  class="dailyDetailDayImg"
-                  width="80"
-                  height="80"
-                />
+        <!-- START current weather info -->
+        <div id="weatherInfo">
+          <!-- START change data with JS -->
+          <img src="" alt="" class="weatherImage" width="200" height="200" />
+          <!-- END change data with JS -->
+        </div>
 
-                <p class="hourlyPopPrecipitation">
-                  30<span class="percentSym">%</span>
-                </p>
-              </li>
-              <li class="hourlyPopContents">
-                <p class="hourlyPopHour">14:00</p>
-                <img
-                  src="images/554.png"
-                  alt=""
-                  class="dailyDetailDayImg"
-                  width="80"
-                  height="80"
-                />
-
-                <p class="hourlyPopPrecipitation">
-                  30<span class="percentSym">%</span>
-                </p>
-              </li>
-              <li class="hourlyPopContents">
-                <p class="hourlyPopHour">17:00</p>
-                <img
-                  src="images/554.png"
-                  alt=""
-                  class="dailyDetailDayImg"
-                  width="80"
-                  height="80"
-                />
-
-                <p class="hourlyPopPrecipitation">
-                  30<span class="percentSym">%</span>
-                </p>
-              </li>
-              <li class="hourlyPopContents">
-                <p class="hourlyPopHour">20:00</p>
-                <img
-                  src="images/554.png"
-                  alt=""
-                  class="dailyDetailDayImg"
-                  width="80"
-                  height="80"
-                />
-
-                <p class="hourlyPopPrecipitation">
-                  30<span class="percentSym">%</span>
-                </p>
-              </li>
-            </ul>
+        <!-- current weather -->
+        <div class="currentWeather">
+          <!-- START current temperature info -->
+          <div id="currentTemp">
+            <h1 class="currentTempTitle">Current Temperature</h1>
+            <p class="currentTempNum">10</p>
+            <p class="currentTempSym">˚C</p>
           </div>
-          <!-- END current P.O.P. info -->
-
-          <!--
-          START current UVI info
-          <div class="currentUVI">
-            <ul class="uviInfo flexList">
-              <li class="hourlyUVIContents">
-                <p class="hourlyUVIndex">3</p>
-              </li>
-              <li class="hourlyUVIContents">
-                <p class="hourlyUVIndex">5</p>
-              </li>
-              <li class="hourlyUVIContents">
-                <p class="hourlyUVIndex">7</p>
-              </li>
-              <li class="hourlyUVIContents">
-                <p class="hourlyUVIndex">4</p>
-              </li>
-              <li class="hourlyUVIContents">
-                <p class="hourlyUVIndex">1</p>
-              </li>
-            </ul>
-          </div>
-          END current UVI info
-        --></div>
-        <!-- END current hourly range POP and UVI -->
+          <!-- END current temperature info -->
+        </div>
+        <!-- END current weather title -->
       </section>
 
       <!-- daily forecast -->
       <section id="dailyForecast" class="contaiers">
-        <ul class="dailyInfo">
-          <li class="dailyDetail">
-            <p class="dailyDetailDay">Sat.</p>
-            <img
-              src="images/554.png"
-              alt=""
-              class="dailyDetailDayImg"
-              width="80"
-              height="80"
-            />
-            <p class="dailyDetailTemp">
-              20<span class="dailyDetailSym">˚C</span>
-            </p>
+        <div class="walkingDogImg">
+          <img src="images/dont-wanna-go3.png" alt="a lazy dog" class="dogs" />
+        </div>
+        <ul class="textAboutWalking">
+          <li class="walkingCards"><p class="cardText">Maybe later</p></li>
+          <li class="walkingCards hidden">
+            <p class="cardText">Grandma! It's time to go for a walk!</p>
           </li>
         </ul>
+      </section>
 
-        <div class="walkingDogTemp">
-          <ul class="walkingDetail">
-            <li class="wakingCards">
-              <div class="dogImage">
-                <img
-                  src="images/dont-wanna-go3.png"
-                  alt="I don't want to go for a walk."
-                  class="dogs"
-                />
-              </div>
-              <p class="walkingTime">16:00</p>
+      <section id="currentHourlyRange">
+        <!-- START current P.O.P. info -->
+        <div class="currentPop">
+          <ul class="popInfo">
+            <li class="hourlyPopContents">
+              <p class="hourlyPopHour">8:00</p>
+              <img
+                src="images/554.png"
+                alt=""
+                class="dailyDetailDayImg"
+                width="80"
+                height="80"
+              />
+              <p class="hourlyPopPrecipitation">
+                30<span class="percentSym">%</span>
+              </p>
+            </li>
+            <li class="hourlyPopContents">
+              <p class="hourlyPopHour">11:00</p>
+              <img
+                src="images/554.png"
+                alt=""
+                class="dailyDetailDayImg"
+                width="80"
+                height="80"
+              />
+
+              <p class="hourlyPopPrecipitation">
+                30<span class="percentSym">%</span>
+              </p>
+            </li>
+            <li class="hourlyPopContents">
+              <p class="hourlyPopHour">14:00</p>
+              <img
+                src="images/554.png"
+                alt=""
+                class="dailyDetailDayImg"
+                width="80"
+                height="80"
+              />
+
+              <p class="hourlyPopPrecipitation">
+                30<span class="percentSym">%</span>
+              </p>
             </li>
           </ul>
         </div>
+        <!-- END current P.O.P. info -->
       </section>
     </main>
 

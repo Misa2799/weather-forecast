@@ -7,15 +7,13 @@
   box-sizing: border-box;
 }
 
-/* accent color: rgb(228,135,92) */
-
 html {
   font-size: 62.5%;
 }
 
 body {
-  background-color: rgb(250, 249, 248);
-  color: rgb(71, 71, 71);
+  background-color: #f9f4f5;
+  color: #1a0107;
 }
 
 input[type="text"]:focus {
@@ -26,21 +24,29 @@ input[type="text"]:focus {
 #wrapper {
   margin: 16px;
   padding: 16px;
-  /* border: 1px solid red; */
 }
 
 ul {
   list-style: none;
 }
 
-.flex {
-  display: flex;
+/*--- header ---*/
+header {
+  background-color: #da627d;
+  height: 6.4rem;
+}
+.headerTittle {
+  font-size: 2.4rem;
+  color: #f9f4f5; /* which white color is this?*/
+  text-align: center;
+  padding: 1.6rem;
 }
 
-/*--- top ---*/
+/*--- section top ---*/
 #top {
   display: flex;
   justify-content: space-between;
+  background-color: rgb(157, 235, 245);
 }
 
 #searchCities {
@@ -108,12 +114,8 @@ ul {
   margin-top: 4rem;
   display: grid;
   grid-template-columns: auto auto auto;
-  border: 1px solid red;
+  background-color: rgb(245, 157, 157);
 }
-
-/* .currentWeather {
-  border: 1px solid red;
-} */
 
 /*--- current temperature info ---*/
 #currentTemp {
@@ -121,24 +123,12 @@ ul {
   font-size: 16rem;
 }
 
+.currentTempNumDiv {
+  display: flex;
+}
 /* .currentTempNum {
   border: 1px solid blue;
 } */
-
-.tempInfo {
-  font-size: 2.4rem;
-  display: flex;
-}
-
-.tempDetail {
-  /* border: 1px solid blue; */
-  display: flex;
-  margin-left: 2rem;
-}
-
-.tempScale {
-  margin-right: 1rem;
-}
 
 /*--- current weather ---*/
 /*--- current weather title ---*/
@@ -178,7 +168,7 @@ ul {
 
 /*--- current hourly range POP and UVI ---*/
 #currentHourlyRange {
-  border: 1px solid blue;
+  background-color: rgb(157, 157, 245);
   font-size: 2.4rem;
 }
 
@@ -187,3 +177,13 @@ ul {
 }
 /*--- current P.O.P. info ---*/
 /*--- current UVI info ---*/
+
+/*--- section dailyForecast .containers ---*/
+.dailyInfo {
+  background-color: rgb(245, 230, 157);
+}
+
+/*--- div walkingDogTemp in section dailyForecast ---*/
+.walkingDogTemp {
+  background-color: rgb(210, 245, 157);
+}

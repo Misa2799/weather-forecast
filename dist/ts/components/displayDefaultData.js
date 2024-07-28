@@ -1,35 +1,31 @@
-export function displayDefaultData(_weatherData) {
+// import { WeatherData } from "../type/WeatherData.js";
+export function displayDefaultData(_currentData) {
     // DOM
     const currentTempNum = document.querySelector(".currentTempNum");
-    const tempHigh = document.querySelector(".tempHigh");
-    const tempLow = document.querySelector(".tempLow");
     const titleCityName = document.querySelector(".titleCityName");
     const weatherImage = document.querySelector(".weatherImage");
-    const weatherDay = document.querySelector(".weatherDay");
+    const currentTime = document.querySelector(".weatherTime");
     // clear all primary data
     if (currentTempNum)
         currentTempNum.textContent = "";
-    if (tempHigh)
-        tempHigh.textContent = "";
-    if (tempLow)
-        tempLow.textContent = "";
     if (titleCityName)
         titleCityName.textContent = "";
     if (weatherImage)
         weatherImage.textContent = "";
-    if (weatherDay)
-        weatherDay.textContent = "";
-    let city = "hiroshima";
-    const capitalizedCityName = city.charAt(0).toUpperCase() + city.slice(1);
+    if (currentTime)
+        currentTime.textContent = "";
+    // replace data
     if (titleCityName)
-        titleCityName.textContent = capitalizedCityName;
+        titleCityName.textContent = _currentData.name;
     if (currentTempNum)
-        currentTempNum.textContent = Math.round(_weatherData.list[0].main.temp - 273.15).toString();
-    if (tempHigh)
-        tempHigh.textContent = Math.round(_weatherData.list[0].main.temp_max - 273.15).toString();
-    if (tempLow)
-        tempLow.textContent = Math.round(_weatherData.list[0].main.temp_min - 273.15).toString();
-    const iconCode = _weatherData.list[0].weather[0].icon;
+        currentTempNum.textContent = Math.round(_currentData.main.temp - 273.15).toString();
+    const hTime = (_currentData.dt + _currentData.timezone) * 1000;
+    const setDateTime = new Date(hTime);
+    console.log("setDateTime:", setDateTime);
+    if (currentTime)
+        currentTime.textContent = setDateTime.toString();
+    console.log("_currentData:", _currentData);
+    const iconCode = _currentData.weather[0].icon;
     const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
     if (weatherImage)
         weatherImage.src = iconUrl;

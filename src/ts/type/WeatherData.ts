@@ -5,8 +5,6 @@ export interface WeatherData {
       main: {
         temp: number;
         feels_like: number;
-        temp_min: number;
-        temp_max: number;
         humidity: number;
       };
       weather: [
@@ -17,11 +15,12 @@ export interface WeatherData {
           icon: string;
         }
       ];
+      pop: number;
+      rain: {
+        "3h": number;
+      };
+      dt_txt: string;
     }
   ];
-  pop: number;
-  rain: {
-    "3h": number;
-  };
-  dt_txt: string;
+  city: { name: string; timezone: number };
 }
