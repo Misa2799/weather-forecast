@@ -58,8 +58,7 @@ header {
 #top {
   display: flex;
   justify-content: space-between;
-  /* max-width: 100%; */
-  background-color: rgb(157, 235, 245);
+  max-width: 100%;
 }
 
 /*---START Input Location ---*/
@@ -79,8 +78,8 @@ input[type="text"]:focus {
 }
 
 #searchCities {
-  font-size: 2rem;
-  width: 20rem;
+  font-size: 1.6rem;
+  width: 16rem;
   height: 4rem;
   border-radius: 8px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
@@ -89,12 +88,9 @@ input[type="text"]:focus {
   padding-right: 3.5rem;
 }
 
-/* .searchForm {
-  background-color: rgb(213, 157, 245);
-} */
 /*---END Input Location ---*/
 
-/*---START Select Location ---*/
+/*---START Select Location HIDDEN!!!!---*/
 .dropdownFavoriteCities {
   position: relative;
   display: inline-block;
@@ -125,7 +121,7 @@ input[type="text"]:focus {
   background-color: rgb(250, 249, 248);
   color: rgb(71, 71, 71);
   padding: 8px 16px;
-  /* font-size: 2rem; */
+  font-size: 1.6rem;
   border: none;
   cursor: pointer;
   border-radius: 8px;
@@ -281,4 +277,7 @@ input[type="text"]:focus {
 
 .hourlyPopHour {
   font-size: 2rem;
+}
+
+@media screen and (width: 1440px) {
 }
