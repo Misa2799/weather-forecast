@@ -23,11 +23,6 @@ body {
   letter-spacing: 0.4%;
 }
 
-input[type="text"]:focus {
-  /* outline: none; */
-  outline: 2px solid rgb(228, 135, 92);
-}
-
 #wrapper {
   /* margin: 16px; */
   padding: 16px;
@@ -41,6 +36,10 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   line-height: 96%;
+}
+
+::placeholder {
+  color: #1a0107;
 }
 
 /*--- header ---*/
@@ -59,19 +58,43 @@ header {
 #top {
   display: flex;
   justify-content: space-between;
+  /* max-width: 100%; */
   background-color: rgb(157, 235, 245);
+}
+
+/*---START Input Location ---*/
+
+input[type="text"]:focus {
+  outline: 2px solid #721328;
+}
+
+.icon-position {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.icon-position > i {
+  margin-left: -3rem;
 }
 
 #searchCities {
   font-size: 2rem;
-  width: 24rem;
+  width: 20rem;
   height: 4rem;
   border-radius: 8px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   text-align: center;
+  padding-right: 3.5rem;
 }
 
+/* .searchForm {
+  background-color: rgb(213, 157, 245);
+} */
+/*---END Input Location ---*/
+
+/*---START Select Location ---*/
 .dropdownFavoriteCities {
   position: relative;
   display: inline-block;
@@ -102,14 +125,14 @@ header {
   background-color: rgb(250, 249, 248);
   color: rgb(71, 71, 71);
   padding: 8px 16px;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   border: none;
   cursor: pointer;
   border-radius: 8px;
   box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   text-align: center;
-  width: 24rem;
+  /* width: 24rem; */
   height: 4rem;
 }
 
@@ -121,6 +144,7 @@ header {
 .show {
   display: block;
 }
+/*---END Select Location ---*/
 
 /*--- hero contents ---*/
 #heroContents {

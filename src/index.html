@@ -28,20 +28,24 @@
         <!-- START search form -->
         <div class="searchForm">
           <form action="" class="searchBox">
-            <input
-              type="text"
-              id="searchCities"
-              placeholder=" Input Location "
-            />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="icon-position">
+              <input
+                type="text"
+                id="searchCities"
+                placeholder=" Input Location "
+              />
+              <i class="fa-solid fa-magnifying-glass fa-2x search-icon"></i>
+            </div>
           </form>
         </div>
         <!-- END search form -->
         <!-- START dropdown of favorite cites -->
         <div class="dropdownFavoriteCities">
           <button class="btnDropdown" onclick="topDropdownFavo()">
-            <i class="far fa-heart"></i>
             Select Location
+            <span style="font-size: 1.6rem; color: #1a0107">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
           </button>
           <div id="topDropdown" class="dropdownContent">
             <a href="">Vancouver</a>
@@ -69,10 +73,10 @@
             <h1 class="titleCityName">Vancouver</h1>
             <ul class="favoIcons">
               <li class="beforeFavo">
-                <i class="far fa-heart titleIcons"></i>
+                <i class="far fa-heart fa-2x titleIcons"></i>
               </li>
               <li class="afterFavo hidden">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart fa-2x"></i>
               </li>
             </ul>
             <!-- END current weather info -->
