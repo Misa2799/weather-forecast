@@ -1,48 +1,14 @@
-// import { fetchWeatherDate } from "./components/fetchWeatherDate.js";
+import { fetchWeatherDate } from "./components/fetchWeatherDate.js";
 import { displayDefaultData } from "./components/displayDefaultData.js";
 import { fetchCurrentDate } from "./components/fetchCurrentDate.js";
-// START section top dropdown btn
-// function topDropdownFavo() {
-//   document.getElementById("topDropdown").classList.toggle("show");
-// }
-// window.onclick = function (event) {
-//   if (!event.target.matches(".btnDropdown")) {
-//     const dropdowns = document.getElementsByClassName("dropdownContent");
-//     for (let i = 0; i < dropdowns.length; i++) {
-//       let openDropdown = dropdowns[i];
-//       if (openDropdown.classList.contains("show")) {
-//         openDropdown.classList.remove("show");
-//       }
-//     }
-//   }
-// };
-// END section top dropdown btn
-// let splittedCity: string = "";
-// function captureCity(city) {
-//   const citySearchElement: HTMLElement | null =
-//     document.getElementById("citySearch");
-//   if (citySearchElement === "")
-// }
-// if (splittedCity == "" || "hiroshima") {
-//   const citySearchElement: HTMLElement | null =
-//     document.getElementById("citySearch");
-//   if (citySearchElement) {
-//     const cityArr: string[] = (
-//       citySearchElement as HTMLInputElement
-//     ).value.split(",");
-//     splittedCity = cityArr[0];
-//     console.log("splittedCity", splittedCity);
-//   } else {
-//     console.error("Please enter a city name");
-//   }
-// }
+import { topDropdownFavo } from "./components/favBtn.js";
+const dropdownBtn = document.querySelector(".btnDropdown");
+dropdownBtn?.addEventListener("click", topDropdownFavo);
 let city = "hiroshima";
 fetchCurrentDate(city)
     .then((data) => {
     if (data) {
-        // const defaultForecast = data.list[0];
         const defaultForecast = data;
-        console.log("defaultForecast", defaultForecast);
         displayDefaultData(defaultForecast);
     }
     else {
@@ -51,5 +17,11 @@ fetchCurrentDate(city)
 })
     .catch((error) => {
     console.error(error);
+});
+fetchWeatherDate(city).then((data) => {
+    if (data) {
+        const hourlyRange = data;
+        console.log("hourlyRange:", hourlyRange);
+    }
 });
 //# sourceMappingURL=index.js.map

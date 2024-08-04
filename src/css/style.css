@@ -42,6 +42,10 @@ h1 {
   color: #1a0107;
 }
 
+a {
+  font-size: 1.6rem;
+}
+
 /*--- header ---*/
 header {
   background-color: #da627d;
