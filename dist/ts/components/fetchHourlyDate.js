@@ -1,20 +1,18 @@
 import { config } from "../apikey.js";
 const apiKey = config.apiKey;
-// console.log("apiKey", apiKey);
-// let splittedCity: string = "";
+let splittedCity = "";
 //START fetch api
 export async function fetchHourlyDate(city) {
     if (city == "") {
-        const citySearchElement = document.getElementById("citySearch");
-        // if (citySearchElement) {
-        //   const cityArr: string[] = (
-        //     citySearchElement as HTMLInputElement
-        //   ).value.split(",");
-        //   splittedCity = cityArr[0];
-        //   console.log("splittedCity", splittedCity);
-        // } else {
-        //   console.error("Please enter a city name");
-        // }
+        const citySearchElement = document.querySelector("#citySearch");
+        if (citySearchElement) {
+            const cityArr = citySearchElement.value.split(",");
+            splittedCity = cityArr[0];
+            console.log("splittedCity", splittedCity);
+        }
+        else {
+            console.error("Please enter a city name");
+        }
     }
     // API Call
     // const forecastUrl: string = `https://api.openweathermap.org/data/2.5/forecast?q=${splittedCity}&appid=${apiKey}`;
@@ -28,4 +26,4 @@ export async function fetchHourlyDate(city) {
     return data;
 }
 //END fetch api
-//# sourceMappingURL=fetchWeatherDate.js.map
+//# sourceMappingURL=fetchHourlyDate.js.map

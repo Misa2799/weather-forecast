@@ -2,25 +2,24 @@ import { config } from "../apikey.js";
 import { WeatherData } from "../type/WeatherData.js";
 
 const apiKey: string = config.apiKey;
-// console.log("apiKey", apiKey);
-// let splittedCity: string = "";
+let splittedCity: string = "";
 
 //START fetch api
-export async function fetchWeatherDate(city: string): Promise<WeatherData> {
-  // if (city == "") {
-  //   const citySearchElement: HTMLElement | null =
-  //     document.getElementById("citySearch");
+export async function fetchHourlyDate(city: string): Promise<WeatherData> {
+  if (city == "") {
+    const citySearchElement: HTMLElement | null =
+      document.querySelector("#citySearch");
 
-  //   if (citySearchElement) {
-  //     const cityArr: string[] = (
-  //       citySearchElement as HTMLInputElement
-  //     ).value.split(",");
-  //     splittedCity = cityArr[0];
-  //     console.log("splittedCity", splittedCity);
-  //   } else {
-  //     console.error("Please enter a city name");
-  //   }
-  // }
+    if (citySearchElement) {
+      const cityArr: string[] = (
+        citySearchElement as HTMLInputElement
+      ).value.split(",");
+      splittedCity = cityArr[0];
+      console.log("splittedCity", splittedCity);
+    } else {
+      console.error("Please enter a city name");
+    }
+  }
 
   // API Call
   // const forecastUrl: string = `https://api.openweathermap.org/data/2.5/forecast?q=${splittedCity}&appid=${apiKey}`;

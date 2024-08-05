@@ -1,7 +1,7 @@
 import { CurrentData } from "../type/CurrentData.js";
 // import { WeatherData } from "../type/WeatherData.js";
 
-export function displayDefaultData(_currentData: CurrentData) {
+export function displayCurrentData(_currentData: CurrentData) {
   // DOM
   const currentTempNum: HTMLParagraphElement | null =
     document.querySelector(".currentTempNum");
@@ -28,11 +28,8 @@ export function displayDefaultData(_currentData: CurrentData) {
 
   const hTime = (_currentData.dt + _currentData.timezone) * 1000;
   const setDateTime: Date = new Date(hTime);
-  console.log("setDateTime:", setDateTime);
 
   if (currentTime) currentTime.textContent = setDateTime.toString();
-
-  console.log("_currentData:", _currentData);
 
   const iconCode = _currentData.weather[0].icon;
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;

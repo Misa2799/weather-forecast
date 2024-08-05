@@ -28,4 +28,4 @@ export function displayCurrentData(_currentData) {
     if (weatherImage)
         weatherImage.src = iconUrl;
 }
-//# sourceMappingURL=displayDefaultData.js.map
+//# sourceMappingURL=displayCurrentData%20copy.js.map

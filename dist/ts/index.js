@@ -1,7 +1,8 @@
-import { fetchWeatherDate } from "./components/fetchWeatherDate.js";
-import { displayDefaultData } from "./components/displayDefaultData.js";
+import { fetchHourlyDate } from "./components/fetchHourlyDate.js";
+import { displayCurrentData } from "./components/displayCurrentData.js";
 import { fetchCurrentDate } from "./components/fetchCurrentDate.js";
 import { topDropdownFavo } from "./components/favBtn.js";
+import { displayHourlyData } from "./components/displayHourlyData.js";
 const dropdownBtn = document.querySelector(".btnDropdown");
 dropdownBtn?.addEventListener("click", topDropdownFavo);
 let city = "hiroshima";
@@ -9,7 +10,7 @@ fetchCurrentDate(city)
     .then((data) => {
     if (data) {
         const defaultForecast = data;
-        displayDefaultData(defaultForecast);
+        displayCurrentData(defaultForecast);
     }
     else {
         console.log("No forecast data available.");
@@ -18,10 +19,14 @@ fetchCurrentDate(city)
     .catch((error) => {
     console.error(error);
 });
-fetchWeatherDate(city).then((data) => {
+fetchHourlyDate(city)
+    .then((data) => {
     if (data) {
-        const hourlyRange = data;
-        console.log("hourlyRange:", hourlyRange);
+        const hourlyData = data;
+        displayHourlyData(hourlyData);
     }
+})
+    .catch((error) => {
+    console.error(error);
 });
 //# sourceMappingURL=index.js.map
