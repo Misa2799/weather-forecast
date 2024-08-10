@@ -6,7 +6,7 @@ export function topDropdownFavo() {
   }
 }
 
-// window.onclick = function (event) {
+// function (event) {
 //   const target = event.target as Element | null;
 //   if (target && !target.matches(".btnDropdown")) {
 //     const dropdowns = document.querySelector(".dropdownContent");
@@ -21,7 +21,7 @@ export function topDropdownFavo() {
 //   }
 // };
 
-// END section top dropdown btn
+// // END section top dropdown btn
 
 // let splittedCity: string = "";
 

@@ -1,33 +1,24 @@
-import { fetchHourlyDate } from "./components/fetchHourlyDate.js";
-import { displayCurrentData } from "./components/displayCurrentData.js";
-import { fetchCurrentDate } from "./components/fetchCurrentDate.js";
 import { topDropdownFavo } from "./components/favBtn.js";
-import { displayHourlyData } from "./components/displayHourlyData.js";
+import { fetchWeatherOnload } from "./components/fetchWeatherOnload.js";
+
+window.addEventListener("load", fetchWeatherOnload);
 
 const dropdownBtn = document.querySelector(".btnDropdown");
 dropdownBtn?.addEventListener("click", topDropdownFavo);
 
-let city: string = "hiroshima";
-fetchCurrentDate(city)
-  .then((data) => {
-    if (data) {
-      const defaultForecast = data;
-      displayCurrentData(defaultForecast);
-    } else {
-      console.log("No forecast data available.");
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+let splittedCity: string = "";
 
-fetchHourlyDate(city)
-  .then((data) => {
-    if (data) {
-      const hourlyData = data;
-      displayHourlyData(hourlyData);
-    }
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+if (splittedCity == "" || "hiroshima") {
+  const citySearchElement: HTMLElement | null =
+    document.querySelector("#citySearch");
+
+  if (citySearchElement) {
+    const cityArr: string[] = (
+      citySearchElement as HTMLInputElement
+    ).value.split(",");
+    splittedCity = cityArr[0];
+    console.log("splittedCity", splittedCity);
+  } else {
+    console.error("Please enter a city name");
+  }
+}
