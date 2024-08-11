@@ -1,18 +1,16 @@
-import { topDropdownFavo } from "./components/favBtn.js";
-import { fetchWeatherOnload } from "./components/fetchWeatherOnload.js";
-window.addEventListener("load", fetchWeatherOnload);
-const dropdownBtn = document.querySelector(".btnDropdown");
-dropdownBtn?.addEventListener("click", topDropdownFavo);
-let splittedCity = "";
-if (splittedCity == "" || "hiroshima") {
-    const citySearchElement = document.querySelector("#citySearch");
-    if (citySearchElement) {
-        const cityArr = citySearchElement.value.split(",");
-        splittedCity = cityArr[0];
-        console.log("splittedCity", splittedCity);
-    }
-    else {
-        console.error("Please enter a city name");
-    }
+import { searchCityWeather } from "./components/searchCityWeather.js";
+window.addEventListener("load", fetchWeather);
+function fetchWeather() {
+    const citySearchElement = document.querySelector("#searchCities");
+    let city = "hiroshima";
+    searchCityWeather(city);
+    citySearchElement?.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            const inputCity = citySearchElement?.value.trim();
+            console.log("inputCity:", inputCity);
+            e.preventDefault();
+            searchCityWeather(inputCity);
+        }
+    });
 }
 //# sourceMappingURL=index.js.map

@@ -2,8 +2,7 @@ import { displayCurrentData } from "./displayCurrentData.js";
 import { displayHourlyData } from "./displayHourlyData.js";
 import { fetchCurrentDate } from "./fetchCurrentDate.js";
 import { fetchHourlyDate } from "./fetchHourlyDate.js";
-let city = "hiroshima";
-export function fetchWeatherOnload() {
+export function searchCityWeather(city) {
     fetchCurrentDate(city)
         .then((data) => {
         if (data) {
@@ -11,11 +10,11 @@ export function fetchWeatherOnload() {
             displayCurrentData(defaultForecast);
         }
         else {
-            console.log("No forecast data available.");
+            throw new Error("Something went wrong");
         }
     })
         .catch((error) => {
-        console.error(error);
+        throw new Error("Something went wrong", error);
     });
     fetchHourlyDate(city)
         .then((data) => {
@@ -25,7 +24,7 @@ export function fetchWeatherOnload() {
         }
     })
         .catch((error) => {
-        console.error(error);
+        throw new Error("Something went wrong", error);
     });
 }
-//# sourceMappingURL=fetchWeatherOnload.js.map
+//# sourceMappingURL=searchCityWeather.js.map
