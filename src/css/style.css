@@ -23,7 +23,7 @@ body {
   letter-spacing: 0.4%;
 }
 
-#wrapper {
+.wrapper {
   max-width: 144rem;
   padding: 16px;
 }
@@ -76,12 +76,14 @@ input[type="text"]:focus {
 
 .icon-position {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
+  margin-right: 2.4rem;
 }
 
 .icon-position > i {
-  margin-left: -3rem;
+  margin-left: -5.5rem;
 }
 
 #searchCities {
@@ -93,61 +95,9 @@ input[type="text"]:focus {
   border: 1px solid #ddd;
   text-align: center;
   padding-right: 3.5rem;
-  margin: 0 auto;
+  margin: 0 2rem;
 }
 /*---END Input Location ---*/
-
-/*---START Select Location HIDDEN!!!!---*/
-/* .dropdownFavoriteCities {
-  position: relative;
-  display: inline-block;
-  display: block;
-}
-
-.dropdownContent {
-  display: none;
-  position: absolute;
-  background-color: rgb(250, 249, 248);
-  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdownContent a {
-  color: rgb(71, 71, 71);
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdownContent a:hover {
-  background-color: #bae9f0;
-}
-
-.btnDropdown {
-  background-color: #a6cfd5;
-  color: rgb(71, 71, 71);
-  padding: 8px 16px;
-  font-size: 1.6rem;
-  border: none;
-  cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  text-align: center; */
-/* width: 24rem; */
-/* height: 4rem;
-}
-
-.btnDropdown:hover,
-.btnDropdown:focus {
-  background-color: #bae9f0;
-}
-
-.show {
-  display: block;
-} */
-/*---END Select Location ---*/
 
 /*--- hero contents ---*/
 #heroContents {
@@ -159,18 +109,10 @@ input[type="text"]:focus {
 .currentWeather {
   width: 55%;
   margin-right: 1.6rem;
-  /* background-color: pink; */
 }
 
 /*--- current weather title ---*/
 #weatherTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.favoIcons {
-  margin-left: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,7 +134,6 @@ input[type="text"]:focus {
 /*--- current temperature info ---*/
 #currentTemp {
   width: 45%;
-  /* background-color: pink; */
 }
 
 .currentTempTitle {
@@ -234,7 +175,6 @@ input[type="text"]:focus {
 
 .textAboutWalking {
   width: 45%;
-  /* height: 12rem; */
   font-size: 2rem;
 
   /*--- START balloon ---*/
@@ -288,5 +228,9 @@ input[type="text"]:focus {
   font-size: 2rem;
 }
 
-@media screen and (width: 1440px) {
-}
+/* @media screen and (max-width: 1440px) {
+  .containers {
+    width: 39.3rem;
+    margin: 0 auto;
+  }
+} */
