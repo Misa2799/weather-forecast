@@ -1,5 +1,4 @@
 import { CurrentData } from "../type/CurrentData.js";
-// import { WeatherData } from "../type/WeatherData.js";
 
 export function displayCurrentData(_currentData: CurrentData) {
   // DOM
@@ -21,10 +20,9 @@ export function displayCurrentData(_currentData: CurrentData) {
   // replace data
   if (titleCityName) titleCityName.textContent = _currentData.name;
 
-  if (currentTempNum)
-    currentTempNum.textContent = Math.round(
-      _currentData.main.temp - 273.15
-    ).toString();
+  const currentTemp = Math.round(_currentData.main.temp - 273.15);
+
+  if (currentTempNum) currentTempNum.textContent = currentTemp.toString();
 
   const hTime = (_currentData.dt + _currentData.timezone) * 1000;
   const setDateTime: Date = new Date(hTime);
@@ -35,4 +33,23 @@ export function displayCurrentData(_currentData: CurrentData) {
   const iconUrl = `https://openweathermap.org/img/wn/${iconCode}@4x.png`;
 
   if (weatherImage) weatherImage.src = iconUrl;
+
+  const dogs: HTMLImageElement | null = document.querySelector(".dogs");
+  const walkingCardsStay = document.querySelector(".walkingCardsStay");
+  const walkingCardsGo = document.querySelector(".walkingCardsGo");
+
+  if (currentTemp <= 26) {
+    const dogsSrc = `images/go.png`;
+    if (dogs) dogs.src = dogsSrc;
+
+    walkingCardsGo?.classList.remove("hidden");
+    walkingCardsStay?.classList.add("hidden");
+  } else {
+    const rndInt = Math.floor(Math.random() * 6) + 1;
+    const dogsSrc = `images/stay-${rndInt}.png`;
+    if (dogs) dogs.src = dogsSrc;
+
+    walkingCardsGo?.classList.add("hidden");
+    walkingCardsStay?.classList.remove("hidden");
+  }
 }
