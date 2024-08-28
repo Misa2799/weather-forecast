@@ -66,6 +66,9 @@ header {
 }
 
 /*---START Input Location ---*/
+.searchForm {
+  width: 40rem;
+}
 
 input[type="text"]:focus {
   outline: 2px solid #721328;
@@ -83,19 +86,19 @@ input[type="text"]:focus {
 
 #searchCities {
   font-size: 1.6rem;
-  width: 16rem;
+  width: 32rem;
   height: 4rem;
   border-radius: 8px;
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   text-align: center;
   padding-right: 3.5rem;
+  margin: 0 auto;
 }
-
 /*---END Input Location ---*/
 
 /*---START Select Location HIDDEN!!!!---*/
-.dropdownFavoriteCities {
+/* .dropdownFavoriteCities {
   position: relative;
   display: inline-block;
   display: block;
@@ -131,9 +134,9 @@ input[type="text"]:focus {
   border-radius: 8px;
   box-shadow: 0 0px 32px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  text-align: center;
-  /* width: 24rem; */
-  height: 4rem;
+  text-align: center; */
+/* width: 24rem; */
+/* height: 4rem;
 }
 
 .btnDropdown:hover,
@@ -143,7 +146,7 @@ input[type="text"]:focus {
 
 .show {
   display: block;
-}
+} */
 /*---END Select Location ---*/
 
 /*--- hero contents ---*/

@@ -10,6 +10,7 @@ export interface CurrentData {
   main: {
     temp: number;
   };
+  sys: { sunset: number };
   dt: number;
   name: string;
   timezone: number;

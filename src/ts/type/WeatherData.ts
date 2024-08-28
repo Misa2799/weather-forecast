@@ -7,20 +7,21 @@ export interface WeatherData {
         feels_like: number;
         humidity: number;
       };
-      weather: [
-        {
-          id: number;
-          main: string;
-          description: string;
-          icon: string;
-        }
-      ];
+      weather: {
+        id: number;
+        main: string;
+        description: string;
+        icon: string;
+      }[];
       pop: number;
-      rain: {
+      rain?: {
         "3h": number;
       };
       dt_txt: string;
     }
   ];
-  city: { name: string; timezone: number };
+  city: {
+    name: string;
+    timezone: number;
+  };
 }

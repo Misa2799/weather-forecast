@@ -12,8 +12,11 @@ export function displayHourlyData(_hourlyData: WeatherData) {
 
     const pHour = document.createElement("p");
     pHour.classList.add("hourlyPopHour");
-    const dateTime = new Date(hourData.dt * 1000);
-    const hour = dateTime.getHours();
+    const dateTime = new Date(hourData.dt * 1000); // Pacific Daylight Time
+
+    const hour = Math.ceil(
+      dateTime.getUTCHours() + _hourlyData.city.timezone / 3600
+    );
     pHour.textContent = `${hour.toString()}:00`;
 
     const img = document.createElement("img");
