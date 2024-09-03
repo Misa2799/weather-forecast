@@ -15,6 +15,7 @@ function fetchWeather() {
       console.log("inputCity:", inputCity);
       e.preventDefault();
       searchCityWeather(inputCity);
+      citySearchElement.value = "";
     }
   });
 }

@@ -38,6 +38,10 @@ export function displayCurrentData(_currentData: CurrentData) {
   const walkingCardsStay = document.querySelector(".walkingCardsStay");
   const walkingCardsGo = document.querySelector(".walkingCardsGo");
 
+  const selected: HTMLSelectElement | null = document.querySelector("#lang");
+  const lang = selected?.value || "ja";
+  console.log(lang);
+
   if (currentTemp <= 26) {
     const dogsSrc = `images/go.png`;
     if (dogs) dogs.src = dogsSrc;
@@ -52,4 +56,34 @@ export function displayCurrentData(_currentData: CurrentData) {
     walkingCardsGo?.classList.add("hidden");
     walkingCardsStay?.classList.remove("hidden");
   }
+
+  const translateToEn = () => {
+    const currentTempTitle: HTMLParagraphElement | null =
+      document.querySelector(".currentTempTitle");
+    const stay: HTMLParagraphElement | null = document.querySelector(".stay");
+    const go: HTMLParagraphElement | null = document.querySelector(".go");
+
+    if (currentTempTitle) currentTempTitle.textContent = "Temperature";
+    if (stay) stay.textContent = "Maybe later...";
+    if (go) go.textContent = "Let's go!";
+  };
+
+  const translateToJa = () => {
+    const currentTempTitle: HTMLParagraphElement | null =
+      document.querySelector(".currentTempTitle");
+    const stay: HTMLParagraphElement | null = document.querySelector(".stay");
+    const go: HTMLParagraphElement | null = document.querySelector(".go");
+
+    if (currentTempTitle) currentTempTitle.textContent = "今日の気温";
+    if (stay) stay.textContent = "行かん...";
+    if (go) go.innerHTML = "ばあちゃん！<br />散歩行こ！";
+  };
+
+  selected?.addEventListener("change", () => {
+    if (selected.value === "en") {
+      translateToEn();
+    } else {
+      translateToJa();
+    }
+  });
 }

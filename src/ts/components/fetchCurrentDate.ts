@@ -10,6 +10,7 @@ const lang = selected?.value || "ja";
 export async function fetchCurrentDate(city: string): Promise<CurrentData> {
   // fetch
   const forecastUrl: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&lang=${lang}`;
+  // const forecastUrl: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   const response = await fetch(forecastUrl);
   if (!response.ok) {
