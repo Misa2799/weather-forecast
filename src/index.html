@@ -29,16 +29,18 @@
         <div class="searchForm">
           <form action="" class="searchBox">
             <div class="icon-position">
-              <input
-                type="text"
-                id="searchCities"
-                placeholder=" Input Location "
-              />
+              <input type="text" id="searchCities" placeholder=" Location " />
               <i class="fa-solid fa-magnifying-glass fa-2x search-icon"></i>
             </div>
           </form>
         </div>
         <!-- END search form -->
+        <!-- START select languages -->
+        <select name="lang" id="lang">
+          <option value="ja" selected>日本語</option>
+          <option value="en">English</option>
+        </select>
+        <!-- END select languages -->
       </section>
 
       <!-- hero contents -->
@@ -63,7 +65,7 @@
 
         <!-- START current temperature info -->
         <div id="currentTemp">
-          <h1 class="currentTempTitle">Current Temperature</h1>
+          <h1 class="currentTempTitle">今の気温</h1>
           <div class="currentTemFlex">
             <p class="currentTempNum"></p>
             <p class="currentTempSym">˚C</p>
@@ -78,9 +80,9 @@
           <img src="images/stay-2.png" alt="a lazy dog" class="dogs" />
         </div>
         <ul class="textAboutWalking">
-          <li class="walkingCardsStay"><p class="cardText">Maybe later</p></li>
+          <li class="walkingCardsStay"><p class="cardText">行かん...</p></li>
           <li class="walkingCardsGo hidden">
-            <p class="cardText">Grandma! It's time to go for a walk!</p>
+            <p class="cardText">ばあちゃん！<br />散歩行こ！</p>
           </li>
         </ul>
       </section>

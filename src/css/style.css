@@ -52,8 +52,7 @@ header {
   height: 6.4rem;
 }
 .headerTittle {
-  /* font-size: 2.4rem; */
-  color: #f9f4f5; /* which white color is this?*/
+  color: #f9f4f5;
   text-align: center;
   line-height: 6.4rem;
 }
@@ -62,12 +61,13 @@ header {
 #top {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   max-width: 100%;
 }
 
 /*---START Input Location ---*/
 .searchForm {
-  width: 40rem;
+  max-width: 28rem;
 }
 
 input[type="text"]:focus {
@@ -157,7 +157,7 @@ input[type="text"]:focus {
 }
 
 .walkingDogImg {
-  width: 55%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,7 +174,7 @@ input[type="text"]:focus {
 }
 
 .textAboutWalking {
-  width: 45%;
+  width: 55%;
   font-size: 2rem;
 
   /*--- START balloon ---*/
@@ -204,6 +204,7 @@ input[type="text"]:focus {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 /*--- current hourly range P.O.P. ---*/
