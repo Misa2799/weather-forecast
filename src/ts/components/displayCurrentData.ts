@@ -18,7 +18,8 @@ export function displayCurrentData(_currentData: CurrentData) {
   if (currentTime) currentTime.textContent = "";
 
   // replace data
-  if (titleCityName) titleCityName.textContent = _currentData.name;
+  if (titleCityName)
+    titleCityName.textContent = _currentData.name.toLocaleUpperCase();
 
   const currentTemp = Math.round(_currentData.main.temp - 273.15);
 
@@ -40,7 +41,6 @@ export function displayCurrentData(_currentData: CurrentData) {
 
   const selected: HTMLSelectElement | null = document.querySelector("#lang");
   const lang = selected?.value || "ja";
-  console.log(lang);
 
   if (currentTemp <= 26) {
     const dogsSrc = `images/go.png`;
