@@ -13,22 +13,17 @@ export function displayHourlyData(_hourlyData: WeatherData) {
     const pHour = document.createElement("p");
     pHour.classList.add("hourlyPopHour");
     const dateTime = new Date(hourData.dt * 1000); // Pacific Daylight Time
+    const utc = dateTime.getUTCHours();
+    const timezone = _hourlyData.city.timezone / 3600;
 
-    let hour = Math.ceil(
-      dateTime.getUTCHours() + _hourlyData.city.timezone / 3600
-    );
+    let hour = Math.ceil(utc + timezone);
 
-    console.log("timedifference:", _hourlyData.city.timezone / 3600);
-
-    console.log("hour:", hour);
-    console.log("UTCHours:", dateTime.getUTCHours());
-
-    if (hour >= 24) {
-      hour = hour - 24;
-      pHour.textContent = `${hour.toString()}:00`;
-    } else {
-      pHour.textContent = `${hour.toString()}:00`;
+    if (hour < 0) {
+      hour += 24;
+    } else if (hour >= 24) {
+      hour -= 24;
     }
+    pHour.textContent = `${hour.toString()}:00`;
 
     const img = document.createElement("img");
     img.classList.add("dailyDetailDayImg");

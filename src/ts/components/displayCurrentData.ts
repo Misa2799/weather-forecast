@@ -40,7 +40,6 @@ export function displayCurrentData(_currentData: CurrentData) {
   const walkingCardsGo = document.querySelector(".walkingCardsGo");
 
   const selected: HTMLSelectElement | null = document.querySelector("#lang");
-  const lang = selected?.value || "ja";
 
   if (currentTemp <= 26) {
     const dogsSrc = `images/go.png`;
