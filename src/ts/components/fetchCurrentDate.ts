@@ -1,11 +1,9 @@
-import { config } from "../apikey.js";
 import { CurrentData } from "../type/CurrentData.js";
+import { config } from "../../apiKey.js";
 
 const apiKey: string = config.apiKey;
 
-//START fetch api
 export async function fetchCurrentDate(city: string): Promise<CurrentData> {
-  // fetch
   const forecastUrl: string = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
 
   const response = await fetch(forecastUrl);
@@ -15,4 +13,3 @@ export async function fetchCurrentDate(city: string): Promise<CurrentData> {
   const data = await response.json();
   return data;
 }
-//END fetch api

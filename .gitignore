@@ -1,6 +1,4 @@
 /.vscode
 node_modules
-apikey.js
-apikey.ts
-*.js.map
 dist
+apiKey.ts
