@@ -6,8 +6,6 @@ Both dogs and people can suffer from heat stroke when walking in hot weather. Ol
 
 Sachiko, in her late 70s, and Komugi, an elderly dog estimated to be 11 years old, are both at a higher risk of heat stroke than I am (in my 30s). However, Sachiko is less likely to notice that she is feeling unwell due to her reduced sensory functions, and Komugi cannot express her discomfort because she is unable to communicate through language. Therefore, it is crucial to minimize the possibility of heat stroke for both of them.
 
-![Weather app](https://drive.google.com/file/d/1OI8gu6UQPBHBzwcbuHXc_VOn33vNTasc/view?usp=sharing)
-
 ## Installation
 
 1. clone this repositry
