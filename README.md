@@ -8,13 +8,16 @@ Sachiko, in her late 70s, and Komugi, an elderly dog estimated to be 11 years ol
 
 ## Installation
 
-1. clone this repositry
+I use [OpenWeather](https://openweathermap.org/).
+Please create your own account if you don't have
+
+1. clone this repository
 
 ```
 git clone https://github.com/Misa2799/weather-forecast.git
 ```
 
-2. move to the repositry
+2. move to the repository
 
 ```
 cd weather-forecast
@@ -26,13 +29,24 @@ cd weather-forecast
 npm install
 ```
 
-4. start watching all files in ts folder
+4. create apiKey.ts in src and copy the syntax below into it
+
+```
+export const config = {
+  apiKey: "your own api key",
+};
+```
+
+5. start watching all files in ts folder
 
 ```
 npx tsc
 ```
 
-This command will create a dist folder in your cloned repositry.
+This command will create a dist folder in your cloned repository.
+
+6. Run index.html with Live server
+
 It's time to start checking Sachiko and Komugi's weather 🎉
 
 ## Technology Stack
@@ -40,6 +54,14 @@ It's time to start checking Sachiko and Komugi's weather 🎉
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white">
+
+## Design by Seina Hoshika
+
+My talented UI/UX designer friend Seina created the design for this weather application! Thank you, Seina! 💐
+
+[Seina's Portfolio](https://nice-ways-992633.framer.app/)
+
+[Seina's LinkedIn](https://www.linkedin.com/in/seina-hoshika-87567a2b2/)
 
 ## Contributing
 
