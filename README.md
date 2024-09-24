@@ -43,7 +43,7 @@ export const config = {
 npx tsc
 ```
 
-This command will create a dist folder in your cloned repository.
+This command will create apiKey.js in the dist folder in your cloned repository.
 
 6. Run index.html with Live server
 
